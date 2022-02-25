@@ -8,6 +8,8 @@ use clap::{Parser, Subcommand};
 #[derive(Debug)]
 pub enum Error {
     OpenFile(std::io::Error),
+    Build(build::Error),
+
 }
 
 impl From<std::io::Error> for Error {
